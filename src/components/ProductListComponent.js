@@ -23,7 +23,9 @@ class ProductListComponent extends React.Component {
 
     render() {
         return (
-            <table>
+            <div className="page-header text-center">
+                <h1>Product List - Sample React Spring Boot App</h1>
+            <table className="table table-bordered alert-danger" width="60">
                 <thead>
                  <tr>
                      <td>Product ID</td>
@@ -43,6 +45,7 @@ class ProductListComponent extends React.Component {
                     )
                 }
             </table>
+            </div>
         )
     }
 
