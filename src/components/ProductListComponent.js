@@ -13,12 +13,15 @@ class ProductListComponent extends React.Component {
     }
 
     componentDidMount() {
-        // ProductService.getProducts()
-        axios.get("http://localhost:8080/api/v1/products").then(
-            response => {
-                this.setState({products : response.data})
-            }
-        )
+        // console.log(ProductService.getProducts())
+        // axios.get("http://localhost:8080/api/v1/products").then(
+        //     response => {
+        //         this.setState({products : response.data})
+        //     }
+        // )
+        ProductService.getProducts().then(response => {
+            this.setState({products : response.data})
+        })
     }
 
     render() {
